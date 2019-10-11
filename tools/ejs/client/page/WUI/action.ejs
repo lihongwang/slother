@@ -1,0 +1,12 @@
+import {BaseAction} from "../../COM/mvc";
+
+import <%=pageName%>Service01 from "./<%=pageName%>Service01";
+
+class <%=pageName%>Action extends BaseAction {
+    init(pageObj) {
+        let service01 = new <%=pageName%>Service01(pageObj);
+        service01.callService(pageObj);
+    }
+}
+
+export default <%=pageName%>Action;

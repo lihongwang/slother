@@ -1,0 +1,18 @@
+import {BaseService} from "../../COM/mvc";
+
+class <%=pageName%>Service01 extends BaseService {
+    prepareRequest(pageObj) {
+        return pageObj.pageModel;
+    }
+    dealWithResults(pageObj, res) {
+        if(res.code === 1) {
+            Object.assign(pageObj.pageModel,res);
+            pageObj.state.initShow = true;
+            pageObj.setState(pageObj.state);
+        } else {
+
+        }
+    }
+}
+
+export default <%=pageName%>Service01;

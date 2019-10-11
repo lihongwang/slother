@@ -1,0 +1,23 @@
+import { withStyles } from "@material-ui/core/styles";
+import <%=name%> from "../../core";
+
+const styles = theme => ({
+    base: {
+
+    },
+    own: {
+
+    },
+    ext: {
+
+    }
+});
+
+class Mui<%=name%> extends <%=name%> {
+    static _pre = "m_<%=sname%>"
+    getStyles() {
+        return styles();
+    }
+}
+
+export default withStyles(Mui<%=name%>.combineStyles(styles))(Mui<%=name%>);

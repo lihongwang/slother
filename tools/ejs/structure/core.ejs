@@ -1,0 +1,37 @@
+import React from "react";
+import <%=name%> from "@material-ui/core<%=name%>";
+import Component from "../base/Component";
+
+class Ext<%=name%> extends <%=name%> {
+
+}
+
+class Core<%=name%> extends Component {
+    static _pre = "<%=sname%>"
+    _render() {
+        const {
+            children
+        } = this.props;
+        return (
+            <Ext<%=name%>
+                id={this.id}
+                classes={this.prepareExtClasses()}
+                className={this.prepareClasses()}
+                style={this.prepareExtStyle()}
+                {...this.restOpts}
+            >
+                {children}
+            </Ext<%=name%>>
+        )
+    }
+}
+
+Core<%=name%>.propTypes = {
+
+}
+
+Core<%=name%>.defaultProps = {
+
+}
+
+export default Core<%=name%>;
